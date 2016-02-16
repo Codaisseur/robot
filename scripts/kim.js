@@ -5,3 +5,4 @@ module.exports = function(robot){
   robot.hear(/.*captain.*/i, function(msg){
     msg.reply('What captain\? You are a lousy sailor');
   })
+}
