@@ -7,7 +7,7 @@ module.exports = function(robot){
     if(message.match(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/gi)){
       msg.reply("Is a valid email");
     }else if(message.match(/are you nuts\?/i)){
-      msg.reply("Yep, totaly!");
+      msg.reply("Yep, totally!");
     }else{
       msg.reply("I don't understand, try again!");
     }
