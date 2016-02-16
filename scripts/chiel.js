@@ -13,7 +13,10 @@ module.exports = function(robot) {
   robot.hear(/ben/i, function(msg){
     msg.reply('Ben loves cats');
   })
-  return robot.respond(/codaisseur/i, function(msg) {
+    robot.hear(/[a-z]/i, function(msg){
+    msg.reply("I am a robot with issues");
+  })
+    robot.respond(/codaisseur/i, function(msg) {
     return msg.send(msg.random(codaisseur));
   });
 };
