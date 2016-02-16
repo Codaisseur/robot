@@ -22,6 +22,9 @@ module.exports = function(robot){
       msg.reply('Juf');
     }
   })
+  robot.respond(/link/i, function(msg){
+    msg.reply('https://github.com/Codaisseur/robot')
+  })
   robot.respond(/who are you\?/, function(msg){
     msg.reply('I am a robot');
   })
