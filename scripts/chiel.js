@@ -9,11 +9,23 @@ codaisseur =
 "https://www.developmentbootcamp.nl/assets/headers/development-bootcamp-sticker-cf29d55ebbb6f421f4cb18e053ad5222.png"
 ]
 
+far =
+["https://s-media-cache-ak0.pinimg.com/236x/97/92/e2/9792e2943e886f1a0331c0e004b6c301.jpg"]
+
+wrong =
+["https://scontent.cdninstagram.com/hphotos-xpf1/t51.2885-15/s320x320/e15/1390043_866788983392716_1782052893_n.jpg"]
+
 module.exports = function(robot) {
   robot.hear(/ben/i, function(msg){
     msg.reply('Ben loves cats');
   })
-  return robot.respond(/codaisseur/i, function(msg) {
+    robot.hear(/far/i, function(msg) {
+    return msg.send(msg.random(far));
+    })
+    robot.hear(/wrong/i, function(msg) {
+    return msg.send(msg.random(wrong));
+    })
+    robot.respond(/codaisseur/i, function(msg) {
     return msg.send(msg.random(codaisseur));
   });
 };
